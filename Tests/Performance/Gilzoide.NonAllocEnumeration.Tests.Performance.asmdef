@@ -1,0 +1,32 @@
+{
+    "name": "Gilzoide.NonAllocEnumeration.Tests.Performance",
+    "rootNamespace": "Gilzoide.NonAllocEnumeration.Tests.Performance",
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "Unity.PerformanceTesting",
+        "Gilzoide.NonAllocEnumeration"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS",
+        "HAVE_PERFORMANCE_TESTING"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.test-framework.performance",
+            "expression": "",
+            "define": "HAVE_PERFORMANCE_TESTING"
+        }
+    ],
+    "noEngineReferences": false
+}
