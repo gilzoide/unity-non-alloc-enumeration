@@ -37,16 +37,8 @@ namespace Gilzoide.NonAllocEnumeration
 
         public bool MoveNext()
         {
-            int newIndex = _index + 1;
-            if (newIndex >= 0 && newIndex < _list.Count)
-            {
-                _index = newIndex;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            _index++;
+            return _index < _list.Count;
         }
 
         public void Reset()
@@ -76,16 +68,8 @@ namespace Gilzoide.NonAllocEnumeration
 
         public bool MoveNext()
         {
-            int newIndex = _index + 1;
-            if (newIndex >= 0 && newIndex < _list.Count)
-            {
-                _index = newIndex;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            _index++;
+            return _index < _list.Count;
         }
 
         public void Reset()

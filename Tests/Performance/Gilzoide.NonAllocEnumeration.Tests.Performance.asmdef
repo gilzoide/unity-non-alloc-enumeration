@@ -5,7 +5,8 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "Unity.PerformanceTesting",
-        "Gilzoide.NonAllocEnumeration"
+        "Gilzoide.NonAllocEnumeration",
+        "Gilzoide.NonAllocEnumeration.Tests"
     ],
     "includePlatforms": [
         "Editor"
