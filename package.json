@@ -1,0 +1,11 @@
+{
+  "name": "com.gilzoide.non-alloc-enumeration",
+  "displayName": "Non-alloc Enumeration",
+  "version": "1.0.0",
+  "description": "Non-alloc enumerables for Unity structures and C# IList/IReadOnlyList.",
+  "homepage": "https://github.com/gilzoide/unity-non-alloc-enumeration",
+  "license": "Unlicense",
+  "author": {
+    "name": "Gil Barbosa Reis"
+  }
+}
