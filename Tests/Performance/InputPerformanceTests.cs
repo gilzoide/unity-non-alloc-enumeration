@@ -20,7 +20,7 @@ namespace Gilzoide.NonAllocEnumeration.Tests.Performance
         {
             PerformanceTestUtils.RunEnumeratePerformanceTest(() =>
             {
-                foreach (var _ in InputEnumeration.Touches);
+                foreach (var _ in InputTouches.EnumerateNonAlloc());
             });
         }
 
@@ -38,7 +38,7 @@ namespace Gilzoide.NonAllocEnumeration.Tests.Performance
         {
             PerformanceTestUtils.RunEnumeratePerformanceTest(() =>
             {
-                foreach (var _ in InputEnumeration.AccelerationEvents);
+                foreach (var _ in InputAccelerationEvents.EnumerateNonAlloc());
             });
         }
     }
