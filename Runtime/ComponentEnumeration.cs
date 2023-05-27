@@ -46,6 +46,29 @@ namespace Gilzoide.NonAllocEnumeration
             return component.gameObject.EnumerateComponentsInParent<T>(includeInactive);
         }
 #endif
+
+#if UNITY_2018_2_OR_NEWER
+        public static NonAllocEnumerable<PooledListEnumerator<Material>, Material> EnumerateMaterials(this Renderer renderer)
+        {
+            List<Material> list = ListPool<Material>.Get();
+            renderer.GetMaterials(list);
+            return new NonAllocEnumerable<PooledListEnumerator<Material>, Material>(new PooledListEnumerator<Material>(list));
+        }
+
+        public static NonAllocEnumerable<PooledListEnumerator<Material>, Material> EnumerateSharedMaterials(this Renderer renderer)
+        {
+            List<Material> list = ListPool<Material>.Get();
+            renderer.GetSharedMaterials(list);
+            return new NonAllocEnumerable<PooledListEnumerator<Material>, Material>(new PooledListEnumerator<Material>(list));
+        }
+#endif
+
+        public static NonAllocEnumerable<PooledListEnumerator<ReflectionProbeBlendInfo>, ReflectionProbeBlendInfo> EnumerateClosestReflectionProbes(this Renderer renderer)
+        {
+            List<ReflectionProbeBlendInfo> list = ListPool<ReflectionProbeBlendInfo>.Get();
+            renderer.GetClosestReflectionProbes(list);
+            return new NonAllocEnumerable<PooledListEnumerator<ReflectionProbeBlendInfo>, ReflectionProbeBlendInfo>(new PooledListEnumerator<ReflectionProbeBlendInfo>(list));
+        }
     }
 
     public struct PooledListEnumerator<T> : IEnumerator<T>
