@@ -12,6 +12,8 @@ Non-alloc enumerables for Unity structures and C# `IList`/`IReadOnlyList` interf
 - (Unity 2021+ only) `GameObject` and `Component`: use the extension methods `EnumerateComponents`, `EnumerateComponentsInChildren` and `EnumerateComponentsInParent` to enumerate components using pooled lists.
   Heap memory may be allocated if there are no pooled lists available or if the pooled list isn't big enough to hold all values, but overall repeated calls will end up being non-alloc.
 - (Unity 2021+ only) `Renderer`: use the extension methods `EnumerateMaterials`, `EnumerateSharedMaterials` and `EnumerateClosestReflectionProbes` to enumerate materials and reflection probe info from a renderer using pooled lists. The same caveats from enumerating components mentioned above apply.
+- `Rect`: use the idiom `foreach (Vector2 corner in rect.EnumerateCorners())` to enumerate a Rect's 4 corners.
+- `Bounds`: use the idiom `foreach (Vector3 corner in bounds.EnumerateCorners())` to enumerate a Bounds' 8 corners.
 
 
 ## Supported C# enumerations
